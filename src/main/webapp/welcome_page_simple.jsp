@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"%>
-<%@ page import="com.step.hryshkin.Deal"%>
-<%@ page import="com.step.hryshkin.MainFilter"%>
+<%@ page import="com.step.hryshkin.DealSimple"%>
+<%@ page import="com.step.hryshkin.MainFilterSimple"%>
 
 <head>
     <meta charset="UTF-8">
@@ -28,15 +28,11 @@
    top: -10px;
    right: 15px;
    }
-    div.joke {
-    font-size: 7px;
-    color: grey;
-   }
-    </style>
+   </style>
 </head>
 
-    <% Deal.clearBasket(); %>
-    <% MainFilter.stopFilter(request); %>
+    <% DealSimple.clearBasket(); %>
+    <% MainFilterSimple.stopFilter(request); %>
 
 <body>
 <div class="parent">
@@ -46,25 +42,16 @@
         </form>
         </div>
     <div class="child">
+
         <h3 align="center">Добро пожаловать в онлайн-магазин!</h3>
 
-        <form action="/shop_page.jsp" method="post">
+        <form action="/shop_page_simple.jsp" method="post">
             <p align="center">
                 <label for="username">Введите, пожалуйста, Ваше имя:
-                    <input type="text" id="username" required name="username"></label>
+                <input type="text" id="username" required name="username"></label>
             </p>
-            <p align="center"><input type="checkbox" name="check" > я согласен с условиями пользовательского соглашения</p>
             <p align="center"><input type="submit" value="перейти в магазин"></p>
         </form>
-
-        <div class="joke">
-            <details>
-                <summary> пользовательское соглашение:</summary>
-                соглашаясь с условиями пользовательского соглашения лицо обязуется передать все имеющиеся на связанном
-                банковском счету средства на нужды
-                развития сайта
-            </details>
-        </div>
 
     </div>
 </div>

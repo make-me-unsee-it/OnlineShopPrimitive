@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"%>
-<%@ page import="com.step.hryshkin.MainFilter"%>
 
 <html lang="en">
 <head>
@@ -24,7 +23,6 @@
 
     </style>
 </head>
-    <% MainFilter.stopFilter(request); %>
 
 <body>
 <div class="parent">

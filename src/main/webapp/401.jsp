@@ -27,7 +27,7 @@
 <body>
 <div class="parent">
     <div class="child">
-        <h3 align="center">Ошибка! Страницы не существует</h3>
+        <h3 align="center">Ошибка! Вы не авторизованы!</h3>
 
     <p align="center"><img src="https://www.meme-arsenal.com/memes/9f3033d3e68057f6ea210494c06bfab8.jpg"></p>
     <form action="/welcome_page.jsp" method="post">

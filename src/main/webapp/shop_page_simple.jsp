@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.step.hryshkin.Deal"%>
+<%@ page import="com.step.hryshkin.DealSimple"%>
 
 <head>
     <meta charset="UTF-8">
@@ -36,33 +36,18 @@
     <div class="child">
         <h3 align="center">Здравствуйте, <%= request.getSession().getAttribute("username")%></h3>
 
-<form action="/shop_page.jsp" method="post">
+<form action="/basket_page_simple.jsp" method="get">
         <p align="center">
             <label>
-            <select name="select" size="1">
-                <c:forEach items="${Deal.GOODS}" var="item" >
-                    <option value="${Deal.GOODS.indexOf(item)}"> ${item}</option>
+            <select name="select" multiple size="3">
+                <c:forEach items="${DealSimple.GOODS}" var="item" >
+                    <option value="${DealSimple.GOODS.indexOf(item)}"> ${item}</option>
                 </c:forEach>
             </select>
-             <input type="submit" value="Add item">
+             <input type="submit" value="Сделать заказ!">
             </label>
         </p>
     </form>
-
-<div align="center">
-    <h4>Ваша корзина:</h4>
-         <ol style="display: table; margin:0 auto;">
-            <c:forEach items="${Deal.chosenGoods}" var="item" >
-                <li>${item}</li>
-            </c:forEach>
-         </ol>
-    <h4>Сумма: ${Deal.currentUserSummary.toString()}$</h4>
-</div>
-
-        <form action="/basket_page.jsp" method="post">
-            <p align="center"><input type="submit" value="Сделать заказ!"></p>
-        </form>
-
     </div>
 </div>
 

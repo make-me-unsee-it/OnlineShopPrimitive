@@ -34,23 +34,9 @@
 <body>
 <div class="parent">
     <div class="child">
-        <h3 align="center">Здравствуйте, <%= request.getSession().getAttribute("username")%></h3>
-
-<form action="/shop_page.jsp" method="post">
-        <p align="center">
-            <label>
-            <select name="select" size="1">
-                <c:forEach items="${Deal.GOODS}" var="item" >
-                    <option value="${Deal.GOODS.indexOf(item)}"> ${item}</option>
-                </c:forEach>
-            </select>
-             <input type="submit" value="Add item">
-            </label>
-        </p>
-    </form>
+        <h3 align="center">Вот Ваш заказ, <%= request.getSession().getAttribute("username")%>!</h3>
 
 <div align="center">
-    <h4>Ваша корзина:</h4>
          <ol style="display: table; margin:0 auto;">
             <c:forEach items="${Deal.chosenGoods}" var="item" >
                 <li>${item}</li>
@@ -59,8 +45,8 @@
     <h4>Сумма: ${Deal.currentUserSummary.toString()}$</h4>
 </div>
 
-        <form action="/basket_page.jsp" method="post">
-            <p align="center"><input type="submit" value="Сделать заказ!"></p>
+        <form action="/welcome_page.jsp" method="post">
+            <p align="center"><input type="submit" value="на главную"></p>
         </form>
 
     </div>

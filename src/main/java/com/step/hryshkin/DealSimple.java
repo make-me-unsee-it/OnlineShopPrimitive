@@ -3,7 +3,7 @@ package com.step.hryshkin;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class Deal {
+public class DealSimple {
     public static final ArrayList<String> GOODS = goodsList();
     public static final ArrayList<String> GOOD_PRICES = goodPrices();
     public static ArrayList<String> chosenGoods = new ArrayList<>();
